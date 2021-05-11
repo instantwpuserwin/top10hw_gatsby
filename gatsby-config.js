@@ -30,6 +30,9 @@ module.exports = {
           process.env.WPGRAPHQL_URL ||
           `https://top10hostingonweb.com/top10clone/graphql/`,
       },
+      production: {
+        allow404Images: true
+      },
     },
 
     /**

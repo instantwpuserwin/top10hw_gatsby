@@ -31,7 +31,7 @@ module.exports = {
           `https://top10hostingonweb.com/top10clone/graphql/`,
 
         production: {
-          allow404Images: true
+          allow404Images: true  
         },
       },
 
@@ -81,5 +81,6 @@ module.exports = {
      * To learn more, visit: https://gatsby.dev/offline
      */
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-meta-redirect`,
   ],
 }

@@ -1,0 +1,98 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content:  space-between;
+  align-items:  center;
+  font-size: var(--fontSize-2);
+  font-family: Montserrat;
+  border-bottom1: 4px black;
+box-shadow1: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+box-shadow1: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.nav-item.logo {
+  font-size: var(--fontSize-4); 
+  font-weight: var(--fontWeight-bold);
+  color: purple;
+}
+
+.nav-item.logo  a {
+  text-decoration:  dashed  ;
+  color: purple;
+  font-family: Montserrat;
+  font-size: var(--fontSize-3);
+}
+
+.nav-item .social {
+  margin-left: 12px; 
+}
+
+
+.burgermenu {
+  position: relative; 
+  cursor: pointer; 
+}
+.sidebar {
+  position: absolute;
+  width: 450px; height:300px; 
+  border: 0px solid black;
+  margin: 20px;
+  padding: 20px;
+  background-color:  white;
+  color:  black;
+  z-index:1;  
+}
+ 
+.menuitem {
+  clear: left;
+  display:block;
+  margin: 10px;
+  font-size: var(--fontSize-4);
+}
+.menuitem a {
+  text-decoration:  dashed  ;
+  color:black;
+  font-family: Montserrat;
+  font-size: var(--fontSize-2);
+}
+
+.menuitem a:hover {
+  font-weight: var(--fontWeight-semibold);
+ 
+}
+
+
+.modalwindow {
+  position: absolute;
+  width: 260px; height:800px;
+  background-color: white;
+  color: black;  
+  margin1: 20px;
+  padding: 20px;
+ border: 0px solid black;
+  -moz-box-shadow: 4px 4px 5px #222;
+  -webkit-box-shadow: 4px 4px 5px #222;
+  box-shadow: 4px 4px 0px rgb(209, 205, 205);
+}
+
+.modalwindow1:after {
+  content:"";
+  position:absolute;
+  width:100%;
+  bottom:1px;
+  z-index:-1;
+  transform:scale(.9);
+  box-shadow: 0px 0px 8px 2px #000000;
+}
+
+
+@media (max-width: 42rem) {
+  .nav-item.logo {
+    font-size: var(--fontSize-2); 
+    font-weight: var(--fontWeight-bold);
+    color: purple;
+  }
+  
+  .social {
+    display:none; 
+  }
+}

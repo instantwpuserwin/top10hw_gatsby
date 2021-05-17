@@ -26,17 +26,19 @@ exports.createPages = async gatsbyUtilities => {
   // And a paginated archive
   await createBlogPostArchive({ posts, gatsbyUtilities })
 
-  // //Display Pages
-  //   // Query our posts from the GraphQL server
-  //   const pages = await getPages(gatsbyUtilities)
+  // const { createRedirect } = gatsbyUtilities.actions;
+  // createRedirect({ fromPath: '/justhost-linux-shared-hosting', toPath: 'http://stats.justhost.com/track?c4b2aca5b19ee22e462c53ebee9833814', isPermanent: true });
+  //Display Pages
+  // Query our posts from the GraphQL server
+  const pages = await getPages(gatsbyUtilities);
 
-  //   console.log(pages);
-  //   // // If there are no posts in WordPress, don't do anything
-  //   if (!pages.length) {
-  //     return
-  //   }
-  
-  // await createIndividualBlogPages({ pages, gatsbyUtilities })
+  console.log(pages);
+  // // If there are no posts in WordPress, don't do anything
+  if (!pages.length) {
+    return
+  }
+
+  await createIndividualBlogPages({ pages, gatsbyUtilities })
 }
 
 /**

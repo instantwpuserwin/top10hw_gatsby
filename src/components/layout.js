@@ -1,46 +1,45 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import parse from "html-react-parser"
+import React  from "react"
+import PropTypes from 'prop-types';
+import MyNavBar from './MyNavBar';
+import Footer from './Footer' 
+
 
 const Layout = ({ isHomePage, children }) => {
-  const {
-    wp: {
-      generalSettings: { title },
-    },
-  } = useStaticQuery(graphql`
-    query LayoutQuery {
-      wp {
-        generalSettings {
-          title
-          description
-        }
-      }
-    }
-  `)
 
+
+  //const [active, setActive] = useState(0);
+  // const handleClick = e => {
+  //   const index = parseInt(e.target.id, 0);
+  //   if (index !== active) {
+  //     setActive(index);
+  //   }
+  // };
+ 
+
+   
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
-      <header className="global-header">
-        {isHomePage ? (
-          <h1 className="main-heading">
-            <Link to="/">{parse(title)}</Link>
-          </h1>
-        ) : (
-          <Link className="header-link-home" to="/">
-            {title}
-          </Link>
-        )}
-      </header>
+    <div >
+    <MyNavBar/>
 
-      <main>{children}</main>
-
-      <footer>
-        © {new Date().getFullYear()} 
-        {` `}
+      <div>     
+        <main>{children}</main>
     
-      </footer>
+      </div>
+    </div>
+ 
+       
+
+     <Footer />
     </div>
   )
 }
+
+Layout.propTypes = {
+  // Injected by the documentation to work in an iframe.
+  // You won't need it on your project.
+  container: PropTypes.object,
+};
+
 
 export default Layout

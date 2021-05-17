@@ -26,12 +26,12 @@
   --spacing-16: 4rem;
   --spacing-20: 5rem;
   --spacing-24: 6rem;
-  --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  --spacing-32: 8rem; 
+  --fontFamily-sans:  Muli, Roboto, Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
+      "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
-    Times, serif;
+  --fontFamily-serif: "Open Sans", "Myriad Pro", "Nunito", "Muli",Times, "Georgia", serif, "Merriweather",  Cambria, "Times New Roman",
+    ;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
@@ -79,12 +79,24 @@ html {
 
 body {
   font-family: var(--font-body);
-  font-size: var(--fontSize-1);
+  font-size: var(--fontSize-3);
   color: var(--color-text);
 }
 
-footer {
-  padding: var(--spacing-6) var(--spacing-0);
+.cryptedmail:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+}
+
+footer { 
+  display: "inline-flex" ;
+  display: flex;
+  flex-direction: row;
+  justify-content:  flex-start; 
+  border-top: blueviolet 1px solid;
+}
+
+footer .footer_column {
+  width: 100%;
 }
 
 hr {
@@ -169,7 +181,7 @@ p {
 
 ul,
 ol {
-  margin-left: var(--spacing-0);
+  margin-left: var(--spacing-1);
   margin-right: var(--spacing-0);
   padding: var(--spacing-0);
   margin-bottom: var(--spacing-8);
@@ -179,7 +191,8 @@ ol {
 
 ul li,
 ol li {
-  padding-left: var(--spacing-0);
+  margin-left: var(--spacing-5);
+  padding-left: var(--spacing-1);
   margin-bottom: calc(var(--spacing-8) / 2);
 }
 
@@ -227,6 +240,11 @@ table thead tr th {
   border-bottom: 1px solid var(--color-accent);
 }
 
+table tr td {
+  border-bottom: 3px solid var(--color-accent);
+}
+
+
 /* Link */
 
 a {
@@ -245,6 +263,11 @@ a:focus {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-10) var(--spacing-5);
+
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-4xl);
+  padding: var(--spacing-10) var(--spacing-5);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -332,4 +355,109 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+
+  footer { 
+    flex-direction: column;
+  }
+  
+}
+
+
+/* buttons */
+button  {
+  background-color: #a46497;
+  color: #fff; 
+}
+
+button.close {
+  background-color: #ffffff;
+  color: #000; 
+  font-size: var(--fontSize-0);
+  padding: 10px;
+} 
+
+.affiliate-abbtn , .affiliate-compr-btn { 
+
+  background-color:#a46497 ; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--fontSize-3);
+}
+
+.affiliate-compr-btn { 
+  padding: 10px 25px;
+  font-size: var(--fontSize-1);
+}
+
+.tab-list {  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+
+}
+
+.tab-list-active {
+  background-color: white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}
+
+.tab-content {
+  margin-left: 1rem;
+}
+
+btncta {
+  background-image: initial;
+  background-color: rgb(178, 71, 6);
+  border-color: rgb(47, 51, 53);
+}
+<style>
+.btncta, .btncta::after, .btncta::before {
+  color: rgb(205, 203, 200);
+  text-decoration-color: rgb(205, 203, 200);
+  column-rule-color: rgb(205, 203, 200);
+  outline-color: rgb(47, 51, 53);
+}
+.btncta {
+  display: inline-block;
+  height: 49.71px;
+  perspective-origin: 291.21px 24.86px;
+  transform-origin: 291.21px 24.86px;
+  background: #ff6305;
+  border: 0 #fff;
+  border-radius: 15px;
+  padding: 10px 30px;
+}
+.btncta, .btncta:after, .btncta:before {
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+  text-decoration: none solid #fff;
+  column-rule-color: #fff;
+  font: normal normal 400 normal 20px/30px Muli;
+  outline: #fff 0;
+}
+
+.gh2 {
+  width: 100%;
+  text-align: left;
+  float: left;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  padding: 10px 0!important;
+  border-left: 10px solid #ff4500;
+  border-left: 10px solid #d93;
+  background: #333!important;
+  font-size: 20px;
+  display1: inline-flex;
 }

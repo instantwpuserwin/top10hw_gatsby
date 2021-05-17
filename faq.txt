@@ -25,7 +25,7 @@ git remote add origin  https://github.com/instantwpuserwin/top10hw_gatsby
 git remote -v
 
 #push to github
-git push -u origin master
+git push -u origin main
 
 #deploy to netlify
 https://app.netlify.com/start/repos/instantwpuserwin%2Fgatsby-yogapride

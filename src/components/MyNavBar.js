@@ -104,7 +104,7 @@ function MyNavBar() {
         </div>
 
         <div className="nav-item">
-          <Link className="btncta"
+          <Link className="btncta-right" 
             to={"/starthere"}
           >
             {"Start Here"}

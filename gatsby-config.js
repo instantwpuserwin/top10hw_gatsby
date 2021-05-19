@@ -25,10 +25,19 @@ module.exports = {
        */
       resolve: `gatsby-source-wordpress`,
       options: {
+
+        schema: {
+          previewRequestConcurrency: 2,
+          requestConcurrency: 5,
+          perPage: 10,
+        },
+        production: {
+          allow404Images: true,
+        },
         // the only required plugin option for WordPress is the GraphQL url.
         url:
           process.env.WPGRAPHQL_URL ||
-          `https://top10hostingonweb.com/top10clone/graphql/`,
+          `https://wh615253.ispot.cc/top10clone/graphql/`,
 
         production: {
           allow404Images: true  

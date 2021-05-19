@@ -415,19 +415,20 @@ button.close {
   margin-left: 1rem;
 }
 
-btncta {
+.btncta-right,btncta {
   background-image: initial;
   background-color: rgb(178, 71, 6);
   border-color: rgb(47, 51, 53);
 }
 <style>
+.btncta-right, .btncta-right::after, .btncta-right::before ,
 .btncta, .btncta::after, .btncta::before {
   color: rgb(205, 203, 200);
   text-decoration-color: rgb(205, 203, 200);
   column-rule-color: rgb(205, 203, 200);
   outline-color: rgb(47, 51, 53);
 }
-.btncta {
+.btncta-right,.btncta {
   display: inline-block;
   height: 49.71px;
   perspective-origin: 291.21px 24.86px;
@@ -437,6 +438,7 @@ btncta {
   border-radius: 15px;
   padding: 10px 30px;
 }
+.btncta-right,btncta-right:after,.btncta-right:before,
 .btncta, .btncta:after, .btncta:before {
   box-sizing: border-box;
   color: #fff;
